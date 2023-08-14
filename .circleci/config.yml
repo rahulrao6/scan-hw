@@ -6,7 +6,7 @@ parameters:
   image-name:
     description: Image to be scanned.
     type: string
-    default: sreejithfocaloid/node-example:latest
+    default: rrao2908/scan-hw:latest
   image-connector:
     description: Connector.
     type: string
@@ -24,7 +24,7 @@ executors:
       - image: cimg/base:<< pipeline.parameters.cimg-tag >>
         auth:
           username: rrao2908
-          password: Te@ms29082003
+          password: $DOCKERHUB_PASSWORD
 jobs:
   publishLatestToHub: 
     executor: docker-publisher
