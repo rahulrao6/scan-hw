@@ -23,8 +23,8 @@ executors:
     # (either docker, macos, or machine), see
       - image: cimg/base:<< pipeline.parameters.cimg-tag >>
         auth:
-          username: $DOCKERHUB_USERNAME
-          password: $DOCKERHUB_PASSWORD
+          username: rrao2908
+          password: Te@ms29082003
 jobs:
   publishLatestToHub: 
     executor: docker-publisher
